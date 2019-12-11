@@ -1,1 +1,1 @@
-echo "Hello from master branch"
+echo "Hello from b1 branch"
