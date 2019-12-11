@@ -4,10 +4,8 @@ pipeline{
         stage("A"){
             steps{
                 sh '''
-                  
+                  sh 
                 '''
-                    
-                }
             }
             
       }
