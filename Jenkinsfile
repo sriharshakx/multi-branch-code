@@ -8,7 +8,7 @@ pipeline{
                     git symbolic-ref --short -q HEAD || git rev-parse --short HEAD
                     git checkout master 
                     git symbolic-ref --short -q HEAD || git rev-parse --short HEAD
-                    git log  | grep ^commit | head -1
+                    cat .git/refs/remotes/origin
                 '''
             }
             
