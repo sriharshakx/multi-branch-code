@@ -4,6 +4,7 @@ pipeline{
         stage("A"){
             steps{
                 sh '''
+                    env
                   sh hello.sh
                     git symbolic-ref --short -q HEAD || git rev-parse --short HEAD
                     git checkout master 
