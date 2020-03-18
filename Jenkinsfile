@@ -5,6 +5,7 @@ pipeline{
             steps{
                 sh '''
                   sh hello.sh
+                  git branch
                 '''
             }
             
