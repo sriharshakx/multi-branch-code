@@ -4,9 +4,10 @@ pipeline{
         stage("A"){
             steps{
                 script {
-                  def proc = 'git symbolic-ref --short -q HEAD || git rev-parse --short HEAD'.execute()   
+                    def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim()
+                  //def proc = 'git symbolic-ref --short -q HEAD || git rev-parse --short HEAD'.execute()   
                 }
-                print proc
+                print disk_size
                 sh '''
                     sh hello.sh
                     git checkout master 
