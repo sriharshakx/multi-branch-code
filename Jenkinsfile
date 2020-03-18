@@ -4,7 +4,7 @@ pipeline{
         stage("A"){
             steps{
                 script {
-                    def disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim()
+                     env.disk_size = sh(script: "df / --output=avail | tail -1", returnStdout: true).trim()
                   //def proc = 'git symbolic-ref --short -q HEAD || git rev-parse --short HEAD'.execute()   
                 }
                 print disk_size
