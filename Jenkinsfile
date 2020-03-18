@@ -5,7 +5,9 @@ pipeline{
             steps{
                 sh '''
                   sh hello.sh
-                  git branch
+                    git symbolic-ref --short -q HEAD || git rev-parse --short HEAD
+                    git checkout master 
+                    git symbolic-ref --short -q HEAD || git rev-parse --short HEAD
                 '''
             }
             
